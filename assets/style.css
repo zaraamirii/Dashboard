@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #111827 0, #020617 45%, #020617 100%);
+  font-family: "IRANSans", "Vazirmatn", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  direction: rtl;
+}
+
+.app-bg {
+  padding: 24px;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-row {
+  align-items: flex-start;
+}
+
+.sidebar-wrapper {
+  padding-left: 12px;
+}
+
+.sidebar-card {
+  background: linear-gradient(145deg, #020617, #0b1120);
+  border-radius: 24px;
+  padding: 24px 12px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 0 0, #f97316, #6366f1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.sidebar-item {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #9ca3af;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  width: 100%;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(148, 163, 184, 0.2);
+  color: #e5e7eb;
+}
+
+.sidebar-item.active {
+  background: linear-gradient(135deg, #312e81, #4f46e5);
+  color: #f9fafb;
+}
+
+.main-wrapper {
+  padding-right: 12px;
+}
+
+.main-card {
+  background-color: #f9fafb;
+  border-radius: 24px;
+  padding: 24px 24px 32px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.topbar-heading {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.topbar-subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  min-width: 220px;
+  font-size: 13px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding-inline: 16px;
+}
+
+.topbar-btn {
+  border-radius: 999px;
+  font-size: 13px;
+  padding-inline: 18px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  border: none;
+}
+
+.charts-row .chart-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 18px 18px 12px;
+  height: 100%;
+}
+
+/* Ensure Plotly graphs fill cards nicely */
+.js-plotly-plot,
+.js-plotly-plot .plot-container,
+.js-plotly-plot .svg-container {
+  width: 100% !important;
+}
+
+.card-header-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.card-caption {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+.section-card {
+  margin-top: 16px;
+  padding: 16px 18px 12px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.section-header-inline {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #0f172a, #1f2937);
+  border-radius: 18px;
+  padding: 12px 14px;
+  color: #e5e7eb;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.5);
+}
+
+.stat-label {
+  margin: 0 0 4px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.filter-row {
+  margin-bottom: 12px;
+}
+
+.filter-label {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.filter-caption {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.export-btn {
+  border-radius: 999px;
+}
+
+/* Dash DataTable tweaks for cleaner look */
+.dash-table-container .dash-spreadsheet-container table {
+  border-collapse: collapse !important;
+}
+
+.dash-table-container .dash-spreadsheet-container th,
+.dash-table-container .dash-spreadsheet-container td {
+  border: none !important;
+  font-size: 13px;
+}
+
+.dash-table-container .dash-spreadsheet-container tr:hover td {
+  background-color: #eef2ff !important;
+}
+
+.dash-table-container .dash-spreadsheet-container tr:first-child th {
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+@media (max-width: 992px) {
+  .app-bg {
+    padding: 12px;
+  }
+
+  .stat-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sidebar-wrapper {
+    padding-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .sidebar-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 20px;
+    gap: 10px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 8px;
+    width: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+
+  .sidebar-item {
+    width: auto;
+    white-space: nowrap;
+    padding: 8px 14px;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 0 !important;
+  }
+
+  .main-wrapper {
+    padding-right: 0;
+  }
+
+  .app-shell {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-row .chart-card {
+    padding: 12px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+  }
+
+  .search-input {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
