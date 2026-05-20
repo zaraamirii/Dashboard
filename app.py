@@ -257,7 +257,8 @@ app: Dash = dash.Dash(
     __name__,
     external_stylesheets=external_stylesheets,
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
-    assets_folder='assets'
+    assets_folder='assets',
+    requests_pathname_prefix='/'
 )
 app.title = "داشبورد پروژه‌های سازمانی"
 server = app.server  # for gunicorn / Render
