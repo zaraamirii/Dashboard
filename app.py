@@ -257,6 +257,7 @@ app: Dash = dash.Dash(
     __name__,
     external_stylesheets=external_stylesheets,
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
+    assets_folder='assets'
 )
 app.title = "داشبورد پروژه‌های سازمانی"
 server = app.server  # for gunicorn / Render
@@ -3504,7 +3505,7 @@ def download_projects(n_clicks, score_range):
     flt = flt.sort_values(["department", "manager", "score"], ascending=[True, True, False])
     return dcc.send_data_frame(flt.to_excel, "projects.xlsx", index=False)
 
-
+server = app.server
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "8050"))
     app.run(host="0.0.0.0", port=port, debug=True)
