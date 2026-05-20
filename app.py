@@ -250,15 +250,13 @@ pie_fig = make_pie_figure(dept_summary)
 
 # ---------- Dash app ----------
 # استفاده از نسخه RTL بوت‌استرپ برای سازگاری تولید و لوکال
-external_stylesheets = [
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-]
-app: Dash = dash.Dash(
+external_stylesheets = [dbc.themes.BOOTSTRAP]
+
+app = Dash(
     __name__,
     external_stylesheets=external_stylesheets,
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
-    assets_folder='assets',
-    requests_pathname_prefix='/'
+    assets_folder='assets'
 )
 app.title = "داشبورد پروژه‌های سازمانی"
 server = app.server  # for gunicorn / Render
